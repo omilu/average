@@ -1,0 +1,23 @@
+#!/bin/awk -f
+BEGIN {
+x = 1
+FS = ",";
+}
+{	if (NR ==1){
+		for (i = 1; i <= NF; i++ ) {
+		average[i] = $i;
+	}
+	}
+	else{
+		for (i = 1; i <= NF; i++) {
+			average[i] += $i;
+		}
+		
+	}
+}
+END{
+	for (i = 1; i <= NF; i++)
+		print average[i]/ NR;
+	}
+
+
