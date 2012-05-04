@@ -1,0 +1,3 @@
+usage ./av.scr infile > outfile
+
+awk script to average each position in the line across all lines
